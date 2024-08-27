@@ -129,11 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Base64.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="Invisikey.cpp" />
     <ClCompile Include="KeyConstants.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Base64.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="KeyConstants.h" />
   </ItemGroup>
