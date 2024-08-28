@@ -24,10 +24,10 @@ namespace Base64
     std::string encrypt_base64(std::string str);
 
     //Constants
-    const std::string& SALT1 = "LM::TB::BB";
-	const std::string& SALT2 = "_:/_77";
-    const std::string& SALT3 = "line=boostedC++";
-    const std::string& BASE64_CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    inline constexpr std::string_view SALT1 = "LM::TB::BB";
+    inline constexpr std::string_view SALT2 = "_:/_77";
+    inline constexpr std::string_view SALT3 = "line=boostedC++";
+    inline constexpr std::string_view BASE64_CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 }
 
 #endif // BASE64_H

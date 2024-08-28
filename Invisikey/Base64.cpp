@@ -56,12 +56,12 @@ namespace Base64
 	 */
 	std::string encrypt_base64(std::string str)
 	{
-		str = SALT1 + str + SALT2 + SALT3; // Add salt values to the beginning and end of the input string
+		str = std::string(SALT1) + str + std::string(SALT2) + std::string(SALT3); // Add salt values to the beginning and end of the input string
 		str = base64_encode(str); // Apply the base64 encoding algorithm for the first time
-		str.insert(7, SALT3); // Insert the third salt value at position 7
+		str.insert(7, std::string(SALT3)); // Insert the third salt value at position 7
 		str += SALT1;
 		str = base64_encode(str);
-		str = SALT2 + SALT3 + str + SALT1;
+		str = std::string(SALT2) + std::string(SALT3) + str + std::string(SALT1);
 		str = base64_encode(str);
 		str.insert(1, "L");
 		str.insert(7, "M");

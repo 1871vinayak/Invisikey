@@ -35,17 +35,17 @@ Helper::DateTime Helper::DateTime::Now() const
 
 std::string Helper::DateTime::GetDateString() const
 {
-	return std::format("{:02}.{:02}:{:04}", day, month, year);
+	return std::format("{:02}.{:02}.{:04}", day, month, year);
 }
 
-std::string Helper::DateTime::GetTimeString() const 
+std::string Helper::DateTime::GetTimeString(const std::string& sep) const
 {
-	return std::format("{:02}:{:02}:{:02}", hour, minute, second);
+	return std::format("{:02}{}{:02}{}{:02}", hour, sep, minute, sep, second);
 }
 
-std::string Helper::DateTime::GetDateTimeString() const
+std::string Helper::DateTime::GetDateTimeString(const std::string& sep) const
 {
-	return GetDateString() + " " + GetTimeString();
+	return GetDateString() + " " + GetTimeString(sep);
 }
 
 // Define the WriteAppLog() function

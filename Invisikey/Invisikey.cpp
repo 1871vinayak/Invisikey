@@ -2,6 +2,10 @@
 //
 #include <windows.h>
 #include <iostream>
+#include "Helper.h"
+#include "KeyConstants.h"
+#include "Base64.h"
+#include "IO.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_opt_ HINSTANCE hPrevInstance,
